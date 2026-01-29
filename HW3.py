@@ -20,8 +20,8 @@ class CouponDispenser:
 
     Required attributes (initialized in __init__):
       - coupon_cards: list[str]              # all possible coupon texts
-      - customer_roster: list[str]             # names in order of assignment
-      - issued_indices: list[int]           # indices into coupon_cards aligned to customer_roster
+      - customer_roster: list[str]           # names in order of assignment
+      - issued_indices: list[int]            # indices into coupon_cards aligned to customer_roster
 
     """
 
@@ -32,8 +32,15 @@ class CouponDispenser:
         Args:
             coupon_cards (list[str]): list of possible coupons users can receive.
         """
-        # TODO: Implement per instructions
-        pass
+
+        self.coupon_cards = coupon_cards
+        # list of all available coupons
+
+        self.customer_roster = []
+        # sets customer names to an empty list so the names are in the order they receive coupons
+
+        self.issued_indices = []
+        # sets the index to an empty list so it stores the index of the coupon given to each customer
 
     def __str__(self):
         """

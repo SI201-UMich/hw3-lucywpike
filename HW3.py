@@ -50,8 +50,8 @@ class CouponDispenser:
         Returns:
             str
         """
-        # TODO: Implement per instructions
-        pass
+        return "|".join(self.coupon_cards)
+        # joins all strings in the list with | between them and "" if coupon_cards is empty
 
     def issue_coupon(self, name):
         """
